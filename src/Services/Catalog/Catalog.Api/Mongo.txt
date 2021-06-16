@@ -1,0 +1,13 @@
+﻿docker ps
+
+docker run -d -p 27017:27017 --name mongo-catalog mongo:latest
+
+docker logs -f mongo-catalog
+
+docker exec -it mongo-catalog /bin/bash
+
+mongo
+
+use CatalogDb
+
+db.creatCollection('Products')
